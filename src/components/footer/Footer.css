@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  font-size: 14px;
+  height: 100px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+.footer svg {
+  margin-right: 0.25rem;
+}
+
+.git-stats {
+  display: flex;
+}
+.git-stats p {
+  margin-right: 10px;
+}
