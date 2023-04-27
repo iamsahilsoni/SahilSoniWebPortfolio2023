@@ -1,2 +1,4 @@
 import NewTabAnchor from "./NewTabAnchor";
-export { NewTabAnchor };
+import useScrollDirection from "./updateScrollDirection";
+
+export { NewTabAnchor, useScrollDirection };

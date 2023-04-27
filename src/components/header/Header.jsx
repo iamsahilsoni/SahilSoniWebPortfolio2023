@@ -2,15 +2,21 @@ import React from "react";
 import { Link } from "react-scroll";
 import * as Router from "react-router-dom";
 import "./Header.css";
-import { NewTabAnchor } from "../generic";
+import { NewTabAnchor, useScrollDirection } from "../generic";
 
 function Header() {
   const urlHistory = Router.useNavigate();
+  const scrollDirection = useScrollDirection();
   React.useEffect(() => {}, [urlHistory]);
   return (
-    <div className="header">
+    <div className={`header ${scrollDirection === "down" ? "hide" : "show"}`}>
       <div className="logo">
-        <img src="your-logo-here.png" alt="Logo" />
+        <Router.Link to="/" reloadDocument={true}>
+          <img
+            src={process.env.PUBLIC_URL + "/favicon-512x512.png"}
+            alt="Logo"
+          />
+        </Router.Link>
       </div>
       <div className="sections">
         {window.location.pathname === "/" ? (
@@ -33,7 +39,7 @@ function Header() {
             <Router.Link to="/recommendations">Recommendations</Router.Link>
             <NewTabAnchor
               href={process.env.PUBLIC_URL + "/resume_SahilSoni.pdf"}>
-              Download PDF
+              Resume
             </NewTabAnchor>
           </>
         ) : (

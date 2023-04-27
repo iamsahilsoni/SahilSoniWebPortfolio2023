@@ -14,18 +14,21 @@ export default function Main() {
       <Header></Header>
       <LeftPanel></LeftPanel>
       <RightPanel></RightPanel>
-      <Routes>
-        <Route path="/" element={<AllSections />} />
-        <Route path="/recommendations" element={<Recommendations />} />
-        <Route
-          path="*"
-          element={
-            <div className="wrong-url">
-              <h1>404 not found</h1>
-            </div>
-          }
-        />
-      </Routes>
+      <div className="wrapper">
+        <Routes>
+          <Route path="/" element={<AllSections />} />
+          <Route path="/recommendations" element={<Recommendations />} />
+          <Route
+            path="*"
+            element={
+              <div className="wrong-url">
+                <h1>404 not found</h1>
+              </div>
+            }
+          />
+        </Routes>
+      </div>
+
       <Footer></Footer>
     </div>
   );

@@ -2,3 +2,7 @@
   min-height: 500px;
   background-color: thistle;
 }
+
+.all-sections {
+  padding: 0 60px;
+}
