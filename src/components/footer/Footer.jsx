@@ -36,10 +36,20 @@ function Footer() {
       </NewTabAnchor>
       <div className="git-stats">
         <p>
-          <FaStar /> {gitStats.star_count} stars
+          <NewTabAnchor href="https://github.com/iamsahilsoni/SahilSoniWebPortfolio2023/">
+            <FaStar />{" "}
+            {gitStats.star_count > 1
+              ? `${gitStats.star_count} stars`
+              : `${gitStats.star_count} star`}
+          </NewTabAnchor>
         </p>
         <p>
-          <FaCodeBranch /> {gitStats.fork_count} forks
+          <NewTabAnchor href="https://github.com/iamsahilsoni/SahilSoniWebPortfolio2023/">
+            <FaCodeBranch />
+            {gitStats.fork_count > 1
+              ? `${gitStats.fork_count} forks`
+              : `${gitStats.fork_count} fork`}
+          </NewTabAnchor>
         </p>
       </div>
     </div>

@@ -1,6 +1,7 @@
 .left-panel {
   position: fixed;
-  bottom: 0;
+  bottom: 100px;
+  top: 100px;
   left: 0;
   width: 60px;
   height: 70%;

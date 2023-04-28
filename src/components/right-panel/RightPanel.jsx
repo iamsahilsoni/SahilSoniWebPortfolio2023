@@ -8,13 +8,16 @@ function RightPanel() {
     <div className="right-panel">
       <ul>
         <li>
-          <NewTabAnchor href="mailto:sonisahil.ca@gmail.com">
-            <div className="rotate-text">
-              <FiMail />
+          <div className="rotate-text">
+            <NewTabAnchor href="mailto:sonisahil.ca@gmail.com">
               <span className="text">sonisahil.ca@gmail.com</span>
-            </div>
-          </NewTabAnchor>
+            </NewTabAnchor>
+            <NewTabAnchor href="mailto:soni87@uwindsor.ca">
+              <span className="text">soni87@uwindsor.ca</span>
+            </NewTabAnchor>
+          </div>
         </li>
+        <li></li>
       </ul>
     </div>
   );

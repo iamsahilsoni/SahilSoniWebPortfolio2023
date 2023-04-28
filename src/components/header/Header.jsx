@@ -33,10 +33,10 @@ function Header() {
             <Link to="contact" smooth={true} hashSpy={true} duration={500}>
               Contact
             </Link>
-            <Router.Link to="/create-yours">
+            {/* <Router.Link to="/create-yours">
               Create Your Portfolio(via dialog box)
             </Router.Link>
-            <Router.Link to="/recommendations">Recommendations</Router.Link>
+            <Router.Link to="/recommendations">Recommendations</Router.Link> */}
             <NewTabAnchor
               href={process.env.PUBLIC_URL + "/resume_SahilSoni.pdf"}>
               Resume
