@@ -3,16 +3,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  font-size: 14px;
-  height: 100px;
+  color: #323232;
+  padding: 20px;
+  height: 50px;
+  background-color: #db9c9c;
 }
 
 .footer a {
-  color: #fff;
   text-decoration: none;
+  font-size: 13px;
+}
+
+.footer .design-credit {
+  font-size: 11px;
 }
 
 .footer p {
@@ -25,7 +28,10 @@
 
 .git-stats {
   display: flex;
+  font-size: 11px;
+  font-weight: 600;
 }
+
 .git-stats p {
   margin-right: 10px;
 }

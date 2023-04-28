@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #fff;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  background-color: #db9c9c;
 }
 
 .logo img {
@@ -24,7 +24,6 @@
 .header {
   position: sticky;
   top: 0px;
-  background-color: #bfdbfe;
   height: 50px;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

@@ -4,21 +4,42 @@ import { FaStar, FaCodeBranch } from "react-icons/fa";
 import { NewTabAnchor } from "../generic";
 
 function Footer() {
+  const [gitStats, setGitStats] = React.useState({
+    star_count: 0,
+    fork_count: 0,
+  });
+  React.useEffect(() => {
+    fetch("https://api.github.com/repos/iamsahilsoni/SahilSoniWebPortfolio2023")
+      .then((data) => data.json())
+      .then((gitResult) => {
+        const newGitStats = {
+          star_count: gitResult.stargazers_count,
+          fork_count: gitResult.forks_count,
+        };
+        setGitStats(newGitStats);
+      });
+  }, []);
   return (
     <div className="footer">
       <NewTabAnchor href="https://github.com/iamsahilsoni/SahilSoniWebPortfolio2023/">
-        <p>Built by Sahil Soni</p>
+        <p>
+          Built by <strong>Sahil Soni</strong>
+        </p>
       </NewTabAnchor>
 
-      <NewTabAnchor href="https://brittanychiang.com/">
-        <p>Design Motivation from Brittany Chiang</p>
+      <NewTabAnchor
+        className="design-credit"
+        href="https://brittanychiang.com/">
+        <p>
+          Design Motivation from <strong>Brittany Chiang</strong>
+        </p>
       </NewTabAnchor>
       <div className="git-stats">
         <p>
-          <FaStar /> 100 stars
+          <FaStar /> {gitStats.star_count} stars
         </p>
         <p>
-          <FaCodeBranch /> 20 forks
+          <FaCodeBranch /> {gitStats.fork_count} forks
         </p>
       </div>
     </div>
