@@ -4,12 +4,19 @@
 
 ul.skills-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(40px, 100px));
+  text-align: start;
+  grid-template-columns: repeat(2, minmax(100px, 200px));
   gap: 0px 10px;
   padding: 0px;
   margin: 20px 0px 0px;
   overflow: hidden;
   list-style: none;
+  justify-content: unset;
+}
+
+.skills-list li {
+  display: flex;
+  margin-bottom: 10px;
 }
 
 .about-section-container {
@@ -33,9 +40,6 @@ ul.skills-list {
 .display-pic {
   width: 100%;
   border-radius: 3%;
-}
-
-.display-pic:hover {
 }
 
 .tech-heading {

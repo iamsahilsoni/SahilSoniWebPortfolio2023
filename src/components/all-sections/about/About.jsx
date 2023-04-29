@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
-import { ImageToggle, NewTabAnchor } from "../../generic/";
+import { TiChevronRight } from "react-icons/ti";
+import { ImageToggle } from "../../generic/";
 
 function About() {
   return (
@@ -33,12 +34,30 @@ function About() {
           </p>
           <div>
             <ul class="skills-list">
-              <li>JavaScript (ES6+)</li>
-              <li>TypeScript</li>
-              <li>Data Structure & Algorithms</li>
-              <li>React</li>
-              <li>Angular</li>
-              <li>C++</li>
+              <li>
+                <TiChevronRight />
+                JavaScript (ES6+)
+              </li>
+              <li>
+                <TiChevronRight />
+                TypeScript
+              </li>
+              <li>
+                <TiChevronRight />
+                Data Structure & Algorithms
+              </li>
+              <li>
+                <TiChevronRight />
+                React
+              </li>
+              <li>
+                <TiChevronRight />
+                Angular
+              </li>
+              <li>
+                <TiChevronRight />
+                C++
+              </li>
             </ul>
           </div>
         </div>
