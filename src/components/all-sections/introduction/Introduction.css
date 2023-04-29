@@ -1,0 +1,28 @@
+.intro {
+  padding: 50px;
+}
+
+.begining-line {
+  font-size: 18px;
+  margin: 0;
+}
+
+.name-line {
+  margin: 15px 0;
+  font-size: 70px;
+  font-weight: 800;
+  font-style: italic;
+  text-shadow: 2px 2px 2px #333;
+}
+
+.status-line {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.summary-line {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 30px 0 0;
+}

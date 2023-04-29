@@ -4,17 +4,16 @@ import Experience from "./experience/Experience";
 import Work from "./work/Work";
 import Contact from "./contact/Contact";
 import "./AllSections.css";
+import Introduction from "./introduction/Introduction";
 
 function AllSections() {
   return (
     <div className="all-sections">
-      <div className="intro">intro</div>
-      <div className="section-wrapper">
-        <About />
-        <Experience />
-        <Work />
-        <Contact />
-      </div>
+      <Introduction></Introduction>
+      <About />
+      <Experience />
+      <Work />
+      <Contact />
     </div>
   );
 }

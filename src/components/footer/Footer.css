@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   color: #323232;
-  padding: 21px;
+  padding: 24px;
   height: 50px;
   background-color: #db9c9c;
 }
@@ -20,6 +20,8 @@
 
 .footer p {
   margin: 0.5rem 0;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .footer svg {
