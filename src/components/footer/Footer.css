@@ -3,15 +3,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #323232;
   padding: 24px;
   height: 50px;
-  background-color: #db9c9c;
+  background-color: #572947f2;
 }
 
 .footer a {
   text-decoration: none;
   font-size: 13px;
+  color: #f3d9c8;
 }
 
 .footer .design-credit {
