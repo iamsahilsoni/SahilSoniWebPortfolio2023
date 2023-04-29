@@ -22,22 +22,23 @@ function Header() {
         {window.location.pathname === "/" ? (
           <>
             <Link to="about" smooth={true} hashSpy={true} duration={500}>
-              About
+              Who Am I
             </Link>
             <Link to="experience" hashSpy={true} smooth={true} duration={500}>
-              Experience
+              Work xP
             </Link>
             <Link to="work" hashSpy={true} smooth={true} duration={500}>
-              Work
+              Creations
             </Link>
             <Link to="contact" smooth={true} hashSpy={true} duration={500}>
-              Contact
+              Say Hello
             </Link>
             {/* <Router.Link to="/create-yours">
               Create Your Portfolio(via dialog box)
             </Router.Link>
             <Router.Link to="/recommendations">Recommendations</Router.Link> */}
             <NewTabAnchor
+              className="resume-button glow-on-hover"
               href={process.env.PUBLIC_URL + "/resume_SahilSoni.pdf"}>
               Resume
             </NewTabAnchor>

@@ -5,7 +5,7 @@ import { NewTabAnchor } from "../../generic";
 function Introduction() {
   return (
     <div className="intro">
-      <h4 className="begining-line">
+      <h4 className="beginning-line">
         <NewTabAnchor href="https://www.google.com/search?q=Namaste">
           Namaste
         </NewTabAnchor>{" "}
