@@ -11,8 +11,8 @@ function About() {
           <p className="about-first-para">
             Hello, my name is
             <strong> Sahil Soni</strong> and I am an experienced Full-Stack Web
-            Application Engineer with 1+ of experience in web development. I
-            have a strong passion for building reliable and efficient web
+            Application Engineer with 1+ year of experience in web development.
+            I have a strong passion for building reliable and efficient web
             applications that provide a seamless user experience. As a current
             Masters student at the University of Windsor, I have had the
             opportunity to work on numerous academic and industry projects that
