@@ -5,17 +5,17 @@
   align-items: center;
   padding: 24px;
   height: 50px;
-  background-color: #572947f2;
+  background-color: #433f3ff2;
 }
 
 .footer a {
   text-decoration: none;
   font-size: 13px;
-  color: #f3d9c8;
+  color: #fffef4;
 }
 
 .footer .design-credit {
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .footer p {

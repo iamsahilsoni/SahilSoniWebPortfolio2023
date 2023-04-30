@@ -1,7 +1,6 @@
 import React from "react";
 import "./About.css";
 import { TiChevronRight } from "react-icons/ti";
-import { ImageToggle } from "../../generic/";
 
 function About() {
   return (
@@ -62,9 +61,13 @@ function About() {
           </div>
         </div>
         <div class="right-section ">
-          <ImageToggle
-            primaryImageUrl="./display-pic1.jpg"
-            secondaryImageUrl="./display-pic2.jpg"></ImageToggle>
+          <div className="container">
+            <img
+              src="./display-pic2.jpg"
+              alt="display pic 2"
+              className="display-pic"
+            />
+          </div>
         </div>
       </div>
     </div>

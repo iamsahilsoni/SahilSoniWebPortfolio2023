@@ -26,3 +26,16 @@
   font-weight: 500;
   margin: 30px 0 0;
 }
+
+.intro-upper-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro-left-section {
+  width: 55%;
+}
+
+.intro-image-section {
+  width: 30%;
+}

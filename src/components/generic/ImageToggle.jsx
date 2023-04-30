@@ -18,7 +18,7 @@ function ImageToggle({ primaryImageUrl, secondaryImageUrl }) {
       onMouseLeave={handleMouseLeave}>
       <img
         src={isPrimary ? primaryImageUrl : secondaryImageUrl}
-        alt="Toggleable Image"
+        alt="Toggleable "
         className="display-pic"
       />
     </div>

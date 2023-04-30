@@ -30,9 +30,7 @@ function Footer() {
       <NewTabAnchor
         className="design-credit"
         href="https://brittanychiang.com/">
-        <p>
-          Design Motivation from <strong>Brittany Chiang</strong>
-        </p>
+        <p>Design Motivation from Brittany Chiang</p>
       </NewTabAnchor>
       <div className="git-stats">
         <p>

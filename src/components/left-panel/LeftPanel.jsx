@@ -1,6 +1,7 @@
 import React from "react";
 import "./LeftPanel.css";
 import { FaGithub, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 import { NewTabAnchor } from "../generic";
 
 function LeftPanel() {
@@ -10,6 +11,11 @@ function LeftPanel() {
         <li>
           <NewTabAnchor href="https://github.com/iamsahilsoni">
             <FaGithub />
+          </NewTabAnchor>
+        </li>
+        <li>
+          <NewTabAnchor href="https://leetcode.com/isthislove/">
+            <SiLeetcode />
           </NewTabAnchor>
         </li>
         <li>
