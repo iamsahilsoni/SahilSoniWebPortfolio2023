@@ -20,6 +20,12 @@ a.email-button {
   margin-top: 30px;
 }
 
+@media (max-width: 1000px) {
+  .contact {
+    padding: 100px 25px 50px;
+  }
+}
+
 @media (max-width: 500px) {
   .contact {
     padding: 100px 30px 50px;

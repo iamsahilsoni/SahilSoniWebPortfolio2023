@@ -40,7 +40,27 @@
   width: 30%;
 }
 /* ------------ */
-@media (max-width: 500px) {
+
+@media (max-width: 1000px) {
+  .intro {
+    padding: 25px;
+  }
+
+  .intro-left-section {
+    width: 50%;
+  }
+  .intro-image-section {
+    width: 45%;
+  }
+  .name-line {
+    font-size: 50px;
+  }
+  .status-line {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 600px) {
   .intro {
     padding: 30px;
   }

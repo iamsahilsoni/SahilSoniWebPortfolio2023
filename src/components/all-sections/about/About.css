@@ -53,6 +53,23 @@ ul.skills-list {
   /* font-weight: 600; */
 }
 
+@media (max-width: 1000px) {
+  .about {
+    padding: 100px 25px 0;
+  }
+  .about-section-container {
+    display: block;
+  }
+  .left-section {
+    width: 100%;
+  }
+
+  .right-section {
+    width: 65%;
+    margin: 30px auto 0;
+  }
+}
+
 @media (max-width: 500px) {
   .about {
     padding: 100px 30px 0;
