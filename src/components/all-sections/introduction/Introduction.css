@@ -39,3 +39,25 @@
 .intro-image-section {
   width: 30%;
 }
+/* ------------ */
+@media (max-width: 500px) {
+  .intro {
+    padding: 30px;
+  }
+  .intro-upper-section {
+    display: block;
+  }
+  .intro-left-section {
+    width: 100%;
+  }
+  .intro-image-section {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .name-line {
+    font-size: 50px;
+  }
+  .status-line {
+    font-size: 25px;
+  }
+}

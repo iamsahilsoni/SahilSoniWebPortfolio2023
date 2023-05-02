@@ -1,9 +1,10 @@
 .contact {
-  padding: 100px 50px 100px;
+  padding: 100px 50px 50px;
 }
 
 .contact-section {
   text-align: center;
+  margin-top: 30px;
 }
 
 a.email-button {
@@ -17,4 +18,10 @@ a.email-button {
 
 .email-btn {
   margin-top: 30px;
+}
+
+@media (max-width: 500px) {
+  .contact {
+    padding: 100px 30px 50px;
+  }
 }

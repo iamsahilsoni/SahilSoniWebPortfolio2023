@@ -28,3 +28,11 @@
   /* transform: translateY(-10px) rotate(1deg); */
   box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
 }
+
+/* ----------------- */
+
+@media (max-width: 500px) {
+  .all-sections {
+    padding: 10px;
+  }
+}

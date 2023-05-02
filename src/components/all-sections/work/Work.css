@@ -1,3 +1,9 @@
 .work {
   padding: 100px 50px 0px;
 }
+
+@media (max-width: 500px) {
+  .work {
+    padding: 100px 30px 0;
+  }
+}

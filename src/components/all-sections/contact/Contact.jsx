@@ -7,7 +7,6 @@ export default function Contact() {
     <div className="contact" id="contact">
       <h4 className="section-heading">Let's Chat 🤝</h4>
       <div className="contact-section">
-        <h2>Get In Touch</h2>
         <p>
           Thank you for visiting my portfolio! <br /> <br />I am a Master of
           Applied Computing student at the University of Windsor. Currently in
@@ -26,7 +25,7 @@ export default function Contact() {
           <NewTabAnchor
             className="email-button glow-on-hover"
             href="mailto:sonisahil.ca@gmail.com">
-            Email
+            Get In Touch
           </NewTabAnchor>
         </div>
       </div>
