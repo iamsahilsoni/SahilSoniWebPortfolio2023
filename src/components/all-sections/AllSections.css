@@ -11,22 +11,8 @@
   box-shadow: 0px 3px 9px -4px;
 }
 
-.container {
-  border-top-left-radius: 37px 140px;
-  border-top-right-radius: 23px 130px;
-  border-bottom-left-radius: 110px 19px;
-  border-bottom-right-radius: 120px 24px;
-
-  border: solid 3px #615959;
-  padding: 10px 30px;
-  margin: 10px;
-  /* transform: rotate(-1deg); */
-  box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
-}
-
-.container:hover {
-  /* transform: translateY(-10px) rotate(1deg); */
-  box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+.display-pic {
+  box-shadow: 9px 12px 13px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* ----------------- */

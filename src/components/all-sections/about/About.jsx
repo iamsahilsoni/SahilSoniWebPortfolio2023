@@ -61,13 +61,11 @@ function About() {
           </div>
         </div>
         <div class="right-section ">
-          <div className="container">
-            <img
-              src="./display-pic2.jpg"
-              alt="display pic 2"
-              className="display-pic"
-            />
-          </div>
+          <img
+            src="./display-pic2.jpg"
+            alt="display pic 2"
+            className="display-pic"
+          />
         </div>
       </div>
     </div>

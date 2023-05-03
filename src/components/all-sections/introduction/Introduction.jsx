@@ -20,13 +20,11 @@ function Introduction() {
           </h2>
         </div>
         <div className="intro-image-section">
-          <div className="container">
-            <img
-              src="./display-pic1.jpg"
-              alt="display pic 1"
-              className="display-pic"
-            />
-          </div>
+          <img
+            src="./display-pic1.jpg"
+            alt="display pic 1"
+            className="display-pic"
+          />
         </div>
       </div>
 
