@@ -12,13 +12,9 @@
 }
 
 .experience-card p {
-  margin: 0;
-  font-size: 18px;
+  margin: 5px 0;
+  font-size: 15px;
   color: #000000;
-}
-
-.experience-card .duration {
-  margin-top: 6px;
 }
 
 .experience-card .responsibilities {
@@ -27,7 +23,8 @@
   flex-direction: column;
   list-style-type: disc;
   align-items: flex-start;
-  font-size: 18px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .experience-card .responsibilities li {
