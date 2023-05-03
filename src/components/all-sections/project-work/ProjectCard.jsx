@@ -13,25 +13,29 @@ function ProjectCard({ idx }) {
         />
       </div>
       <div className="project-details">
-        <div className="project-heading">React Portfolio</div>
+        <div className="project-heading">
+          React PortfolioP ortfolioPortfo lioPortfolio
+        </div>
         <div className="project-desc">
           <div className="desc-wrapper">
             <div>
               I believe that the best user experiences are created when design
-              and functionality are seamlesslybelieve that the best user
-              experiences are created when design and functionality are
-              seamlesslybelieve that the best user experiences are created when
-              design and functionality are seamlesslybelieve that the best user
-              experiences are created when believe that the best user
-              experiences are created when design and functionality are
-              seamlesslybelieve that the best user experiences are created when
-              design and functionality are seamlesslybelieve that the best user
-              experiences are created when design and functionality are
+              ed when design and functionality are seamlesslybelieve that the
+              best user experiences aelieve that the best user experiences are
+              created when design and functionality are seamlesslybelieve that
+              the best user experiences are created when design and
+              functionality are seamlesslybelieve that the best user experiences
+              are created when design and functionality are seamlesslybelieve
+              that the best user experiences are created when believe that the
+              best user experiences are created when design and functionality
+              are seamlesslybelieve that the best user experiences are created
+              when design and functionality are seamlesslybelieve that the best
+              user experiences are created when design and functionality are
               seamlessly and functionality are seamlesslybelieve that the best
               user experiences are created when design and functionality are
               seamlesslybelieve that the best user experiences are created when
-              design and functionality are seamlessly integrated, and this is
-              where II
+              design and functionality are created when design and functionality
+              are seamlessly integrated, and this is where II
             </div>
           </div>
         </div>
