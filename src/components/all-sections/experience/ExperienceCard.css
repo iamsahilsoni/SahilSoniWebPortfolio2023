@@ -1,5 +1,5 @@
 .experience-card {
-  background-color: #deddddf2;
+  background-color: #f0f1e9f2;
   border-radius: 10px;
   box-shadow: 4px 4px 7px 0px rgba(19, 19, 19, 0.1);
   padding: 20px;
@@ -28,7 +28,7 @@
 }
 
 .experience-card .responsibilities li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .show-btn {
   width: 100%;
