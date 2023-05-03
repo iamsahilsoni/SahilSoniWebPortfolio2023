@@ -32,7 +32,7 @@ function About() {
             Here are a few technologies I’ve been working with recently
           </p>
           <div>
-            <ul class="skills-list">
+            <ul className="skills-list">
               <li>
                 <TiChevronRight />
                 JavaScript (ES6+)
@@ -60,7 +60,7 @@ function About() {
             </ul>
           </div>
         </div>
-        <div class="right-section ">
+        <div className="right-section ">
           <img
             src="./display-pic2.jpg"
             alt="display pic 2"

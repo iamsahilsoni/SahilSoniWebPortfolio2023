@@ -5,7 +5,7 @@ import RightPanel from "./right-panel/RightPanel";
 import AllSections from "./all-sections/AllSections";
 import Footer from "./footer/Footer";
 import { Routes, Route } from "react-router-dom";
-import { Recommendations } from "./recommendations/Recommendations ";
+import { PortfolioBuilder } from "./recommendations/PortfolioBuilder";
 import "./Main.css";
 
 export default function Main() {
@@ -30,7 +30,7 @@ export default function Main() {
       <div className="wrapper">
         <Routes>
           <Route path="/" element={<AllSections />} />
-          <Route path="/recommendations" element={<Recommendations />} />
+          <Route path="/build-portfolio" element={<PortfolioBuilder />} />
           <Route
             path="*"
             element={

@@ -38,6 +38,7 @@
   margin: auto;
   color: white;
   margin-left: -150px;
+  width: calc(100% + 150px);
 }
 
 .project-card.odd .project-desc {
@@ -77,6 +78,7 @@
   box-shadow: 14px 6px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   border: 1px solid #32323226;
+  padding: 2px;
 }
 .project-screenshot:hover {
   transition: transform 1s ease-in-out;
@@ -98,7 +100,7 @@
     width: 55%;
   }
   .project-desc {
-    max-height: 30%;
+    max-height: 45%;
   }
   .project-links {
     margin-bottom: 15px;
