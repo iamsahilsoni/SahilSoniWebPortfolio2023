@@ -32,6 +32,7 @@ ul.skills-list {
 
 .right-section {
   width: 35%;
+  text-align: center;
 }
 
 .right-section .image {
@@ -39,7 +40,7 @@ ul.skills-list {
 }
 
 .display-pic {
-  width: 100%;
+  width: 90%;
   border-radius: 3%;
 }
 
@@ -65,8 +66,14 @@ ul.skills-list {
   }
 
   .right-section {
-    width: 65%;
+    width: 50%;
     margin: 30px auto 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .right-section {
+    width: 70%;
   }
 }
 
