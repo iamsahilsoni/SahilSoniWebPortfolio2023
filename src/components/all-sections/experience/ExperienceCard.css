@@ -1,0 +1,60 @@
+.experience-card {
+  background-color: #deddddf2;
+  border-radius: 10px;
+  box-shadow: 4px 4px 7px 0px rgba(19, 19, 19, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.experience-card h5 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.experience-card p {
+  margin: 0;
+  font-size: 18px;
+  color: #000000;
+}
+
+.experience-card .duration {
+  margin-top: 6px;
+}
+
+.experience-card .responsibilities {
+  margin-top: 10px;
+  padding-left: 30px;
+  flex-direction: column;
+  list-style-type: disc;
+  align-items: flex-start;
+  font-size: 18px;
+}
+
+.experience-card .responsibilities li {
+  margin-bottom: 5px;
+}
+.show-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.show-more-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4f4c4c2f;
+  color: #333;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+@media (max-width: 500px) {
+  .experience-card .responsibilities {
+    padding-left: 10px;
+    font-size: 15px;
+  }
+}
