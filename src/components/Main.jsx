@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./header/Header";
 import LeftPanel from "./left-panel/LeftPanel";
 import RightPanel from "./right-panel/RightPanel";
@@ -9,11 +9,24 @@ import { Recommendations } from "./recommendations/Recommendations ";
 import "./Main.css";
 
 export default function Main() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="main">
       <Header></Header>
-      <LeftPanel></LeftPanel>
-      <RightPanel></RightPanel>
+      {width > 500 && (
+        <>
+          <LeftPanel></LeftPanel>
+          <RightPanel></RightPanel>
+        </>
+      )}
+
       <div className="wrapper">
         <Routes>
           <Route path="/" element={<AllSections />} />
@@ -28,7 +41,7 @@ export default function Main() {
           />
         </Routes>
       </div>
-
+      {width <= 500 && <LeftPanel />}
       <Footer></Footer>
     </div>
   );

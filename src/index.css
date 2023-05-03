@@ -12,13 +12,6 @@ code {
     monospace;
 }
 
-@media screen and (max-width: 500px) {
-  .left-panel,
-  .right-panel {
-    display: none;
-  }
-}
-
 /* custom scrollbar */
 ::-webkit-scrollbar {
   width: 20px;

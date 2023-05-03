@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import * as Router from "react-router-dom";
 import "./Header.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { ImCross } from "react-icons/im";
 import { NewTabAnchor, useScrollDirection } from "../generic";
+import LeftPanel from "../left-panel/LeftPanel";
 
 function NavGroup(props) {
   return (
@@ -57,6 +58,13 @@ function Header() {
 
   const [showSideMenu, setShowSideMenu] = useState(false);
 
+  useEffect(() => {
+    if (showSideMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }, [showSideMenu]);
   React.useEffect(() => {}, [urlHistory]);
 
   return (
@@ -94,6 +102,7 @@ function Header() {
                     onClick={() => setShowSideMenu(false)}
                   />
                   <NavGroup setShowSideMenu={setShowSideMenu} />
+                  <LeftPanel />
                 </div>
               )}
             </div>

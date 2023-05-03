@@ -193,4 +193,7 @@ a.resume-button {
   .side-menu a:hover:not(.resume-button) {
     color: #f39c12;
   }
+  .side-menu svg:hover {
+    color: #f39c12;
+  }
 }
