@@ -7,10 +7,10 @@ export default function Work() {
     <div className="work" id="work">
       <h4 className="section-heading">Some Things I’ve Built 🛠️</h4>
       <div className="projects-group">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard idx={0} />
+        <ProjectCard idx={1} />
+        <ProjectCard idx={2} />
+        <ProjectCard idx={3} />
       </div>
     </div>
   );
