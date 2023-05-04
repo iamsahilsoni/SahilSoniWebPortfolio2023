@@ -5,10 +5,16 @@ import RightPanel from "./right-panel/RightPanel";
 import AllSections from "./all-sections/AllSections";
 import Footer from "./footer/Footer";
 import { Routes, Route } from "react-router-dom";
-import { PortfolioBuilder } from "./recommendations/PortfolioBuilder";
+import { PortfolioBuilder } from "./portfolio-build/PortfolioBuilder";
 import "./Main.css";
 
-export default function Main() {
+export default function Main({
+  headerData,
+  footerData,
+  socialMediaLinks,
+  emails,
+  userData,
+}) {
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -19,30 +25,30 @@ export default function Main() {
 
   return (
     <div className="main">
-      <Header></Header>
+      <Header {...headerData} socialMediaLinks={socialMediaLinks} />
       {width > 500 && (
         <>
-          <LeftPanel></LeftPanel>
-          <RightPanel></RightPanel>
+          <LeftPanel {...socialMediaLinks}></LeftPanel>
+          <RightPanel emails={emails}></RightPanel>
         </>
       )}
 
       <div className="wrapper">
         <Routes>
-          <Route path="/" element={<AllSections />} />
+          <Route path="/" element={<AllSections {...userData} />} />
           <Route path="/build-portfolio" element={<PortfolioBuilder />} />
           <Route
             path="*"
             element={
               <div className="wrong-url">
-                <h1>404 not found</h1>
+                <h1 style={{ margin: "auto" }}>404 not found</h1>
               </div>
             }
           />
         </Routes>
       </div>
-      {width <= 500 && <LeftPanel />}
-      <Footer></Footer>
+      {width <= 500 && <LeftPanel {...socialMediaLinks} />}
+      <Footer {...footerData} />
     </div>
   );
 }

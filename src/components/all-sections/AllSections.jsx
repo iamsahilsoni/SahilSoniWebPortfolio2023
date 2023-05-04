@@ -6,14 +6,20 @@ import Contact from "./contact/Contact";
 import "./AllSections.css";
 import Introduction from "./introduction/Introduction";
 
-function AllSections() {
+function AllSections({
+  experiences,
+  projectWork,
+  contactInfo,
+  introInfo,
+  aboutInfo,
+}) {
   return (
     <div className="all-sections">
-      <Introduction></Introduction>
-      <About />
-      <Experience />
-      <Work />
-      <Contact />
+      <Introduction {...introInfo} />
+      <About {...aboutInfo} />
+      <Experience experiences={experiences} />
+      <Work projectWork={projectWork} />
+      <Contact {...contactInfo} />
     </div>
   );
 }

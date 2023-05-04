@@ -44,7 +44,7 @@ function NavGroup(props) {
       </Link>
       <NewTabAnchor
         className="resume-button glow-on-hover"
-        href={process.env.PUBLIC_URL + "/resume_SahilSoni.pdf"}
+        href={props.resumeSrc}
         onClick={() => props.setShowSideMenu(false)}>
         Resume
       </NewTabAnchor>
@@ -52,7 +52,7 @@ function NavGroup(props) {
   );
 }
 
-function Header() {
+function Header(props) {
   const urlHistory = Router.useNavigate();
   const scrollDirection = useScrollDirection();
 
@@ -71,20 +71,16 @@ function Header() {
     <div className={`header ${scrollDirection === "down" ? "hide" : "show"}`}>
       <div className="logo">
         <Router.Link to="/" reloadDocument={true}>
-          <img
-            src={process.env.PUBLIC_URL + "/favicon-512x512.png"}
-            alt="Logo"
-          />
+          <img src={props.logoSrc} alt="Logo" />
         </Router.Link>
       </div>
       {window.location.pathname === "/" ? (
         <>
           <div className="sections">
-            <NavGroup setShowSideMenu={setShowSideMenu} />
-            {/* <Router.Link to="/create-yours">
-              Create Your Portfolio(via dialog box)
-            </Router.Link>
-            <Router.Link to="/recommendations">Recommendations</Router.Link> */}
+            <NavGroup
+              resumeSrc={props.resumeSrc}
+              setShowSideMenu={setShowSideMenu}
+            />
           </div>
           <div className="hamburger-button-section">
             <div
@@ -102,7 +98,7 @@ function Header() {
                     onClick={() => setShowSideMenu(false)}
                   />
                   <NavGroup setShowSideMenu={setShowSideMenu} />
-                  <LeftPanel />
+                  <LeftPanel {...props.socialMediaLinks} />
                 </div>
               )}
             </div>

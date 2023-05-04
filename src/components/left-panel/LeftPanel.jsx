@@ -4,32 +4,32 @@ import { FaGithub, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { NewTabAnchor } from "../generic";
 
-function LeftPanel() {
+function LeftPanel(props) {
   return (
     <div className="left-panel">
       <ul>
         <li>
-          <NewTabAnchor href="https://github.com/iamsahilsoni">
+          <NewTabAnchor href={props.githubUrl}>
             <FaGithub />
           </NewTabAnchor>
         </li>
         <li>
-          <NewTabAnchor href="https://leetcode.com/isthislove/">
+          <NewTabAnchor href={props.leetcodeUrl}>
             <SiLeetcode />
           </NewTabAnchor>
         </li>
         <li>
-          <NewTabAnchor href="https://www.instagram.com/iamsahilsoni/">
+          <NewTabAnchor href={props.instaUrl}>
             <FaInstagram />
           </NewTabAnchor>
         </li>
         <li>
-          <NewTabAnchor href="https://twitter.com/yeahsahil">
+          <NewTabAnchor href={props.twitterUrl}>
             <FaTwitter />
           </NewTabAnchor>
         </li>
         <li>
-          <NewTabAnchor href="https://www.linkedin.com/in/lialh4/">
+          <NewTabAnchor href={props.linkedinUrl}>
             <FaLinkedin />
           </NewTabAnchor>
         </li>

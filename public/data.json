@@ -1,0 +1,90 @@
+{
+  "userData": {
+    "experiences": [
+      {
+        "company": "SourceFuse Technologies, India",
+        "position": "Junior Engineer - Web Apps ",
+        "duration": "Jul 2021 - Aug 2022",
+        "description": [
+          "Developed a web-based project management system using Angular and LoopBack4, incorporating design patterns such as the Singleton, Factory, and Observer patterns to improve code maintainability and extensibility.",
+          "Optimized database queries in PostgreSQL, resulting in a 10% improvement in query performance through indexing.",
+          "Conducted code reviews and provided feedback to improve code quality and maintainability."
+        ]
+      },
+      {
+        "company": "SourceFuse Technologies, India",
+        "position": "Trainee - Web Apps",
+        "duration": "Jan 2021 - Jun 2021",
+        "description": [
+          "Completed training in Angular and Loopback4, gained knowledge of best practices, and applied learning to contribute to live projects.",
+          "Demonstrated a rigorous attention to detail and a relentless drive to deliver top-quality code, meeting all deadlines and milestones as scheduled.",
+          "Engaged in agile practices, such as daily stand-ups, strategic sprint planning, and insightful retrospectives. "
+        ]
+      }
+    ],
+    "projectWork": [
+      {
+        "project_heading": "Twitter Analytics (React App)",
+        "imgSrc": "assets/twitter-analytics-app.png",
+        "project_desc": "Single-page Twitter Analytics app, where users can enter a Twitter handle or hashtag and retrieve relevant data. As my first React project, I gained a solid understanding of component-based development and data flow. I also implemented data adaptation to facilitate efficient communication between components and the backend. ",
+        "gitUrl": "https://github.com/iamsahilsoni/twitter_analytics_ADT_course",
+        "extUrl": "https://iamsahilsoni-twitter-analytics.netlify.app/"
+      },
+      {
+        "project_heading": "Zero Waste (Angular App)",
+        "imgSrc": "assets/zero-waste-app.png",
+        "project_desc": "Key contributor to an Angular-powered dashboard featuring login and signup pages with real-time validation. Built using best practices, project demonstrates my development expertise and commitment to quality.",
+        "gitUrl": "https://github.com/iamsahilsoni/zero-waste",
+        "extUrl": "https://iamsahilsoni-zero-waste.netlify.app//"
+      },
+      {
+        "project_heading": "Deep learning based image classification (Publication)",
+        "imgSrc": "assets/publication.png",
+        "project_desc": "Co-authored a research publication titled 'Deep learning based image classification for intestinal hemorrhage' in the journal Multimedia Tools and Applications. Our study focused on developing a supervised learning ensemble to accurately detect bleeding in images of Wireless Capsule Endoscopy, using convolutional neural networks and optimized attribute selection.",
+        "extUrl": "https://doi.org/10.1007/s11042-020-08905-7"
+      }
+    ],
+    "contactInfo": {
+      "content": "Thank you for visiting my portfolio! <br /><br />I am a Master of Applied Computing student at the University of Windsor. Currently in my third semester, I am eager to gain practical, hands-on experience through a <strong>co-op or internship opportunity starting in September 2023.</strong><br /><br />If you have a co-op or internship opportunity that aligns with my interests, please don't hesitate to contact me through email or other platforms. I look forward to hearing from you soon!",
+      "email": "sonisahil.ca@gmail.com"
+    },
+    "introInfo": {
+      "name": "Sahil Soni",
+      "status": "Web 2.0 is my canvas, Competitive Programming is my sport, and Web 3.0 is the frontier I'm eager to explore.",
+      "displayPic": "./assets/display-pic1.jpg",
+      "summary": "With a year of industry and academic project experience under my belt, I've honed my proficiency in Angular, React, and Competitive programming. Additionally, I possess a strong foundation in data structures, algorithms, and database management, as well as experience working with frameworks like Loopback4 and technologies such Git and AWS."
+    },
+    "aboutInfo": {
+      "firstPara": "Hello, my name is <strong> Sahil Soni</strong> and I am an experienced Full-Stack Web Application Engineer with 1+ year of experience in web development. I have a strong passion for building reliable and efficient web applications that provide a seamless user experience. As a current Masters student at the University of Windsor, I have had the opportunity to work on numerous academic and industry projects that have challenged me to consistently learn and grow as a professional.",
+      "secondPara": "During my free time, I enjoy engaging in two of my passions - playing chess and staying fit by going to the gym. As a dedicated Web Apps Engineer, I am always seeking ways to enhance my skills and expertise in building high-quality Web applications. I am eager to apply my knowledge and experience to help clients fulfill their Web Application needs, and I am always ready to take on new challenges. Thank you for visiting my website, and I am excited to connect with you soon!",
+      "displayPic": "./assets/display-pic2.jpg",
+      "skillsList": [
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "Data Structure & Algorithms",
+        "React",
+        "Angular",
+        "C++"
+      ]
+    }
+  },
+  "headerData": {
+    "resumeSrc": "/assets/resume_SahilSoni.pdf",
+    "logoSrc": "/assets/favicon-512x512.png"
+  },
+  "footerData": {
+    "gitUrl": "https://github.com/iamsahilsoni/SahilSoniWebPortfolio2023",
+    "creditContent": "Design Motivation from Brittany Chiang",
+    "creditUrl": "https://brittanychiang.com/",
+    "selfCreditContent": "Built by <strong>Sahil Soni</strong>",
+    "gitRepo": "iamsahilsoni/SahilSoniWebPortfolio2023"
+  },
+  "socialMediaLinks": {
+    "githubUrl": "https://github.com/iamsahilsoni",
+    "leetcodeUrl": "https://leetcode.com/isthislove/",
+    "instaUrl": "https://www.instagram.com/iamsahilsoni/",
+    "twitterUrl": "https://twitter.com/yeahsahil",
+    "linkedinUrl": "https://www.linkedin.com/in/lialh4/"
+  },
+  "emails": ["sonisahil.ca@gmail.com", "soni87@uwindsor.ca"]
+}

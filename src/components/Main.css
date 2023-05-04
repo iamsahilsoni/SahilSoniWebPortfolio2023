@@ -6,6 +6,11 @@
 .wrapper {
   flex: 1;
 }
+.wrong-url {
+  justify-content: center;
+  display: flex;
+  padding: 50px;
+}
 
 @media (min-width: 500px) {
   .left-panel {

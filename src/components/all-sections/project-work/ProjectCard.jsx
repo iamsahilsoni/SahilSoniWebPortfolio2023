@@ -5,18 +5,18 @@ import { FaGithub, FaLink } from "react-icons/fa";
 
 function ProjectCard({
   idx,
-  img_src,
-  git_url,
-  ext_url,
+  imgSrc,
+  gitUrl,
+  extUrl,
   project_heading,
   project_desc,
 }) {
   return (
     <div className={`project-card ${idx % 2 ? "odd" : "even"}`}>
       <div className="project-pic">
-        <NewTabAnchor href={ext_url}>
+        <NewTabAnchor href={extUrl}>
           <img
-            src={img_src}
+            src={imgSrc}
             alt="project-screenshot"
             className="project-screenshot"
           />
@@ -31,14 +31,16 @@ function ProjectCard({
         </div>
         <div className="project-links">
           <div className="links-group">
-            {git_url && (
-              <NewTabAnchor href={git_url}>
+            {gitUrl && (
+              <NewTabAnchor href={gitUrl}>
                 <FaGithub />
               </NewTabAnchor>
             )}
-            <NewTabAnchor href={ext_url}>
-              <FaLink />
-            </NewTabAnchor>
+            {extUrl && (
+              <NewTabAnchor href={extUrl}>
+                <FaLink />
+              </NewTabAnchor>
+            )}
           </div>
         </div>
       </div>

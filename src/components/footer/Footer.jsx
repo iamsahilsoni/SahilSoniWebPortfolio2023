@@ -3,46 +3,48 @@ import "./Footer.css";
 import { FaStar, FaCodeBranch } from "react-icons/fa";
 import { NewTabAnchor } from "../generic";
 
-function Footer() {
+function Footer({
+  gitUrl,
+  creditContent,
+  creditUrl,
+  selfCreditContent,
+  gitRepo,
+}) {
   const [gitStats, setGitStats] = React.useState({
     star_count: 0,
     fork_count: 0,
   });
   React.useEffect(() => {
-    fetch("https://api.github.com/repos/iamsahilsoni/SahilSoniWebPortfolio2023")
+    fetch(`https://api.github.com/repos/${gitRepo}`)
       .then((data) => data.json())
       .then((gitResult) => {
         const newGitStats = {
-          star_count: gitResult.stargazers_count,
-          fork_count: gitResult.forks_count,
+          star_count: gitResult.stargazers_count ?? 0,
+          fork_count: gitResult.forks_count ?? 0,
         };
         setGitStats(newGitStats);
       });
-  }, []);
+  }, [gitRepo]);
   return (
     <div className="footer">
-      <NewTabAnchor href="https://github.com/iamsahilsoni/SahilSoniWebPortfolio2023/">
-        <p>
-          Built by <strong>Sahil Soni</strong>
-        </p>
+      <NewTabAnchor href={gitUrl}>
+        <p dangerouslySetInnerHTML={{ __html: selfCreditContent }}></p>
       </NewTabAnchor>
 
-      <NewTabAnchor
-        className="design-credit"
-        href="https://brittanychiang.com/">
-        <p>Design Motivation from Brittany Chiang</p>
+      <NewTabAnchor className="design-credit" href={creditUrl}>
+        <p>{creditContent}</p>
       </NewTabAnchor>
       <div className="git-stats">
         <p>
-          <NewTabAnchor href="https://github.com/iamsahilsoni/SahilSoniWebPortfolio2023/">
-            <FaStar />{" "}
+          <NewTabAnchor href={gitUrl}>
+            <FaStar />
             {gitStats.star_count > 1
               ? `${gitStats.star_count} stars`
               : `${gitStats.star_count} star`}
           </NewTabAnchor>
         </p>
         <p>
-          <NewTabAnchor href="https://github.com/iamsahilsoni/SahilSoniWebPortfolio2023/">
+          <NewTabAnchor href={gitUrl}>
             <FaCodeBranch />
             {gitStats.fork_count > 1
               ? `${gitStats.fork_count} forks`

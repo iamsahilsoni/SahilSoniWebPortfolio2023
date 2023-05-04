@@ -2,29 +2,16 @@ import React from "react";
 import "./Contact.css";
 import { NewTabAnchor } from "../../generic";
 
-export default function Contact() {
+export default function Contact(props) {
   return (
     <div className="contact" id="contact">
       <h4 className="section-heading">Let's Chat 🤝</h4>
       <div className="contact-section">
-        <p>
-          Thank you for visiting my portfolio! <br /> <br />I am a Master of
-          Applied Computing student at the University of Windsor. Currently in
-          my third semester, I am eager to gain practical, hands-on experience
-          through a{" "}
-          <strong>
-            co-op or internship opportunity starting in September 2023.
-          </strong>
-          <br />
-          <br />
-          If you have a co-op or internship opportunity that aligns with my
-          interests, please don't hesitate to contact me through email or other
-          platforms. I look forward to hearing from you soon!
-        </p>
+        <p dangerouslySetInnerHTML={{ __html: props.content }}></p>
         <div className="email-btn">
           <NewTabAnchor
             className="email-button glow-on-hover"
-            href="mailto:sonisahil.ca@gmail.com">
+            href={`mailto:${props.email}`}>
             Get In Touch
           </NewTabAnchor>
         </div>
