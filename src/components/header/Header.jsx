@@ -97,7 +97,10 @@ function Header(props) {
                     className="hamburger-close"
                     onClick={() => setShowSideMenu(false)}
                   />
-                  <NavGroup setShowSideMenu={setShowSideMenu} />
+                  <NavGroup
+                    setShowSideMenu={setShowSideMenu}
+                    resumeSrc={props.resumeSrc}
+                  />
                   <LeftPanel {...props.socialMediaLinks} />
                 </div>
               )}
