@@ -5,7 +5,7 @@ import RightPanel from "./right-panel/RightPanel";
 import AllSections from "./all-sections/AllSections";
 import Footer from "./footer/Footer";
 import { Routes, Route } from "react-router-dom";
-import { PortfolioBuilder } from "./portfolio-build/PortfolioBuilder";
+import { PortfolioBuilder } from "./portfolio-builder/PortfolioBuilder";
 import "./Main.css";
 
 export default function Main({
@@ -41,7 +41,7 @@ export default function Main({
             path="*"
             element={
               <div className="wrong-url">
-                <h1 style={{ margin: "auto" }}>404 not found</h1>
+                <h1>404 not found</h1>
               </div>
             }
           />
