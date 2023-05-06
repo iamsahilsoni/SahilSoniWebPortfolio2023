@@ -12,9 +12,11 @@ function About(props) {
             className="about-first-para"
             dangerouslySetInnerHTML={{ __html: props.firstPara }}></p>
           <p>{props.secondPara}</p>
-          <p className="tech-heading">
-            Here are a few technologies I’ve been working with recently
-          </p>
+          {props?.skillsList?.length && (
+            <p className="tech-heading">
+              Here are a few technologies I’ve been working with recently
+            </p>
+          )}
           <div>
             <ul className="skills-list">
               {props?.skillsList?.map((skill, idx) => {
