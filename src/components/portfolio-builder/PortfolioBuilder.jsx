@@ -13,17 +13,6 @@ import {
 import "./PortfolioBuilder.css";
 import AppData from "./emptyData";
 
-const forms = [
-  <Instructions />,
-  <IntroForm />,
-  <AboutForm />,
-  <ExperienceForm />,
-  <ProjectForm />,
-  <ContactForm />,
-  <HeaderFooterForm />,
-  <SocialmediaLinksEmailForm />,
-];
-
 const previewModalStyles = {
   overlay: {
     backgroundColor: "rgba(0, 0, 0, 0.7)",
@@ -39,14 +28,6 @@ const previewModalStyles = {
 
 Modal.setAppElement("#root");
 
-// HOC this gets a component and return a same component with added props,
-// Need it, as i have array of components and adding props later on
-const SelectedFormComponentWithProps = (Component, props) => {
-  if (!Component) return null;
-  const WrappedComponent = () => <Component {...props} />;
-  return <WrappedComponent />;
-};
-
 class PortfolioBuilder extends Component {
   constructor(props) {
     super(props);
@@ -57,10 +38,65 @@ class PortfolioBuilder extends Component {
     };
   }
 
+  forms = [
+    <Instructions />,
+    <IntroForm />,
+    <AboutForm />,
+    <ExperienceForm />,
+    <ProjectForm />,
+    <ContactForm />,
+    <HeaderFooterForm />,
+    <SocialmediaLinksEmailForm />,
+  ];
+
+  updateUserData = (newIntroInfo, propName) => {
+    this.setState((prevState) => {
+      const updatedObj = {
+        ...prevState,
+        appData: {
+          ...prevState.appData,
+          userData: {
+            ...prevState.appData.userData,
+            [propName]: newIntroInfo,
+          },
+        },
+      };
+      return updatedObj;
+    });
+  };
+
+  // HOC this gets a component and return a same component with added props,
+  // Need it, as i have array of components and adding props later on
+  SelectedFormComponentWithProps = (Component, props) => {
+    if (!Component) return null;
+    const WrappedComponent = () => <Component {...props} />;
+    return <WrappedComponent />;
+  };
+
   renderSectionContent() {
     const { activeSection } = this.state;
-    if (activeSection >= forms.length || activeSection < 0) return null;
-    return forms[activeSection].type;
+    if (activeSection >= this.forms.length || activeSection < 0) return null;
+
+    const selectedForm = this.forms[activeSection];
+    return this.SelectedFormComponentWithProps(
+      selectedForm.type,
+      activeSection && activeSection <= 5
+        ? {
+            updateUserData: this.updateUserData,
+            userData: this.state.appData.userData,
+          }
+        : activeSection === 6
+        ? {
+            headerData: this.state.headerData,
+            footerData: this.state.footerData,
+          }
+        : activeSection === 7
+        ? {
+            socialMediaLinks: this.state.socialMediaLinks,
+            emails: this.state.emails,
+          }
+        : {}
+    );
   }
 
   handleButtonClick(idx) {
@@ -80,26 +116,21 @@ class PortfolioBuilder extends Component {
             Previous
           </button>
           <button onClick={() => this.togglePreview()}>Preview</button>
-          {this.state.activeSection + 1 === forms.length && (
+          {this.state.activeSection + 1 === this.forms.length && (
             <button
               className="generate-json"
               onClick={() => console.log("Generating JSON")}
-              disabled={this.state.activeSection + 1 !== forms.length}>
+              disabled={this.state.activeSection + 1 !== this.forms.length}>
               Generate JSON
             </button>
           )}
           <button
             onClick={() => this.handleButtonClick(this.state.activeSection + 1)}
-            disabled={this.state.activeSection + 1 >= forms.length}>
+            disabled={this.state.activeSection + 1 >= this.forms.length}>
             Next
           </button>
         </div>
-        <div className="form-section">
-          {SelectedFormComponentWithProps(
-            this.renderSectionContent(),
-            this.state.appData
-          )}
-        </div>
+        <div className="form-section">{this.renderSectionContent()}</div>
 
         <Modal
           isOpen={this.state.openPreview}
