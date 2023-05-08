@@ -24,6 +24,13 @@
     ],
     "projectWork": [
       {
+        "project_heading": "Build Your Portfolio (React App)",
+        "imgSrc": "assets/build-your-portfolio-app.png",
+        "project_desc": "Designed a portfolio builder form, allowing users to create a custom JSON file for portfolio by filling out a form; Created a clean design and integrated useful features, making the portfolio project an effective tool for developers to showcase work and establish a professional online presence",
+        "gitUrl": "https://github.com/iamsahilsoni/SahilSoniWebPortfolio2023",
+        "extUrl": "https://sahilsoni.me/build-your-portfolio"
+      },
+      {
         "project_heading": "Twitter Analytics (React App)",
         "imgSrc": "assets/twitter-analytics-app.png",
         "project_desc": "Single-page Twitter Analytics app, where users can enter a Twitter handle or hashtag and retrieve relevant data. As my first React project, I gained a solid understanding of component-based development and data flow. I also implemented data adaptation to facilitate efficient communication between components and the backend. ",
