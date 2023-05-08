@@ -26,7 +26,7 @@
       {
         "project_heading": "Build Your Portfolio (React App)",
         "imgSrc": "assets/build-your-portfolio-app.png",
-        "project_desc": "Designed a portfolio builder form, allowing users to create a custom JSON file for portfolio by filling out a form; Created a clean design and integrated useful features, making the portfolio project an effective tool for developers to showcase work and establish a professional online presence",
+        "project_desc": "Designed a portfolio builder form, allowing users to create a custom JSON file for portfolio by filling out a form; Created a clean design and integrated useful features, making the portfolio project an effective tool for developers to showcase work and establish a professional online presence.",
         "gitUrl": "https://github.com/iamsahilsoni/SahilSoniWebPortfolio2023",
         "extUrl": "https://sahilsoni.me/build-your-portfolio"
       },
