@@ -64,7 +64,6 @@ class AboutForm extends Component {
 
   render() {
     const { firstPara, secondPara, displayPic, skillsList } = this.state.data;
-
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-heading">About</div>
