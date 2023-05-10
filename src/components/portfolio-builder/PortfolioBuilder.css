@@ -103,12 +103,25 @@ button {
   margin-bottom: 15px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .portfolioBuilder {
-    padding: 20px 20px;
+    padding: 20px 80px;
+  }
+  .input-field-section {
+    margin: 20px 20px;
   }
   .input-field-section label {
     display: grid;
-    margin: 10px 20px 0;
+    margin: 10px 20px;
+  }
+  .switch-btn {
+    display: grid;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .portfolioBuilder {
+    padding: 20px 20px;
   }
 }
