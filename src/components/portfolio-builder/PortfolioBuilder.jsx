@@ -49,7 +49,7 @@ class PortfolioBuilder extends Component {
     <SocialmediaLinksEmailForm />,
   ];
 
-  updateUserData = (newIntroInfo, propName) => {
+  updateUserData = (newData, propName) => {
     this.setState((prevState) => {
       const updatedObj = {
         ...prevState,
@@ -57,8 +57,36 @@ class PortfolioBuilder extends Component {
           ...prevState.appData,
           userData: {
             ...prevState.appData.userData,
-            [propName]: newIntroInfo,
+            [propName]: newData,
           },
+        },
+      };
+      return updatedObj;
+    });
+  };
+
+  updateHeaderFooterData = (newData) => {
+    this.setState((prevState) => {
+      const updatedObj = {
+        ...prevState,
+        appData: {
+          ...prevState.appData,
+          headerData: newData.headerData,
+          footerData: newData.footerData,
+        },
+      };
+      return updatedObj;
+    });
+  };
+
+  updateLinksEmailsData = (newData) => {
+    this.setState((prevState) => {
+      const updatedObj = {
+        ...prevState,
+        appData: {
+          ...prevState.appData,
+          socialMediaLinks: newData.socialMediaLinks,
+          emails: newData.emails,
         },
       };
       return updatedObj;
@@ -87,13 +115,15 @@ class PortfolioBuilder extends Component {
           }
         : activeSection === 6
         ? {
-            headerData: this.state.headerData,
-            footerData: this.state.footerData,
+            updateHeaderFooterData: this.updateHeaderFooterData,
+            headerData: this.state.appData.headerData,
+            footerData: this.state.appData.footerData,
           }
         : activeSection === 7
         ? {
-            socialMediaLinks: this.state.socialMediaLinks,
-            emails: this.state.emails,
+            updateLinksEmailsData: this.updateLinksEmailsData,
+            socialMediaLinks: this.state.appData.socialMediaLinks,
+            emails: this.state.appData.emails,
           }
         : {}
     );
@@ -119,8 +149,18 @@ class PortfolioBuilder extends Component {
           {this.state.activeSection + 1 === this.forms.length && (
             <button
               className="generate-json"
-              onClick={() => console.log("Generating JSON")}
-              disabled={this.state.activeSection + 1 !== this.forms.length}>
+              onClick={() => {
+                const json = JSON.stringify(this.state.appData);
+                const blob = new Blob([json], { type: "application/json" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.download = "data.json";
+                a.href = url;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+              }}>
               Generate JSON
             </button>
           )}
