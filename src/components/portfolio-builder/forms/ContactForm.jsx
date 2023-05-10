@@ -28,24 +28,28 @@ class ContactForm extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-heading">Contact</div>
-        <label>
-          Content:
-          <textarea
-            name="content"
-            value={content}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={this.handleChange}
-          />
-        </label>
-        <button type="submit">Save</button>
+        <div className="input-field-section">
+          <label>
+            Content:
+            <textarea
+              name="content"
+              value={content}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label>
+            Email:
+            <input
+              type="email"
+              name="email"
+              value={email}
+              onChange={this.handleChange}
+            />
+          </label>
+        </div>
+        <div className="form-save-button">
+          <button type="submit">Save</button>
+        </div>
       </form>
     );
   }

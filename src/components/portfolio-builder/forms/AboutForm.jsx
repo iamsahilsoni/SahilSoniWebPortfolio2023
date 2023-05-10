@@ -68,52 +68,62 @@ class AboutForm extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-heading">About</div>
-        <label>
-          First Paragraph:
-          <textarea
-            name="firstPara"
-            value={firstPara}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label>
-          Second Paragraph:
-          <textarea
-            name="secondPara"
-            value={secondPara}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label>
-          Display Pic:
-          <input
-            type="text"
-            name="displayPic"
-            value={displayPic}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label>
-          Skills List:
-          {skillsList.map((skill, index) => (
-            <div key={index}>
-              <input
-                type="text"
-                value={skill}
-                onChange={(event) => this.handleSkillsListChange(index, event)}
-              />
-              <button
-                type="button"
-                onClick={() => this.handleRemoveSkill(index)}>
-                Remove Skill
+        <div className="input-field-section">
+          <label>
+            First Paragraph:
+            <textarea
+              name="firstPara"
+              value={firstPara}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label>
+            Second Paragraph:
+            <textarea
+              name="secondPara"
+              value={secondPara}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label>
+            Display Picture:
+            <input
+              type="text"
+              name="displayPic"
+              value={displayPic}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label>
+            Skills List:
+            {skillsList.map((skill, index) => (
+              <div key={index}>
+                <input
+                  type="text"
+                  value={skill}
+                  onChange={(event) =>
+                    this.handleSkillsListChange(index, event)
+                  }
+                />
+                {index !== 0 && (
+                  <button
+                    type="button"
+                    onClick={() => this.handleRemoveSkill(index)}>
+                    Remove Skill
+                  </button>
+                )}
+              </div>
+            ))}
+            <div className="add-sub-section">
+              <button type="button" onClick={this.handleAddSkill}>
+                Add Another Skill
               </button>
             </div>
-          ))}
-          <button type="button" onClick={this.handleAddSkill}>
-            Add Skill
-          </button>
-        </label>
-        <button type="submit">Save</button>
+          </label>
+        </div>
+        <div className="form-save-button">
+          <button type="submit">Save</button>
+        </div>
       </form>
     );
   }

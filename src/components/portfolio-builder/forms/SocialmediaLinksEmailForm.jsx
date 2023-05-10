@@ -15,9 +15,9 @@ class SocialMediaLinksEmailForm extends Component {
       <div>
         <div className="form-heading">Links and Emails</div>
         <div>
-          <div className="links-data">
+          <div className="links-data input-field-section">
             <label>
-              githubUrl
+              GitHub Url
               <input
                 type="text"
                 name={`githubUrl`}
@@ -35,7 +35,7 @@ class SocialMediaLinksEmailForm extends Component {
               />
             </label>
             <label>
-              leetcodeUrl:
+              Leetcode Url:
               <input
                 type="text"
                 name={`leetcodeUrl`}
@@ -53,7 +53,7 @@ class SocialMediaLinksEmailForm extends Component {
               />
             </label>
             <label>
-              instaUrl:
+              Instagram Url:
               <input
                 type="text"
                 name={`instaUrl`}
@@ -71,7 +71,7 @@ class SocialMediaLinksEmailForm extends Component {
               />
             </label>
             <label>
-              twitterUrl:
+              Twitter Url:
               <input
                 type="text"
                 name={`twitterUrl`}
@@ -89,7 +89,7 @@ class SocialMediaLinksEmailForm extends Component {
               />
             </label>
             <label>
-              linkedinUrl:
+              Linkedin Url:
               <input
                 type="text"
                 name={`linkedinUrl`}
@@ -107,14 +107,14 @@ class SocialMediaLinksEmailForm extends Component {
               />
             </label>
           </div>
-          <div className="emails">
-            {emails.map((email, idx) => {
-              return (
-                <div key={idx}>
-                  <label>
-                    emails:
+          <div className="emails input-field-section">
+            <label>
+              Email:
+              {emails.map((email, idx) => {
+                return (
+                  <div key={idx}>
                     <input
-                      type="text"
+                      type="email"
                       name={`email`}
                       value={email}
                       onChange={(event) => {
@@ -127,46 +127,53 @@ class SocialMediaLinksEmailForm extends Component {
                         }));
                       }}
                     />
-                  </label>
+                  </div>
+                );
+              })}
+              {emails.length > 1 && (
+                <div>
+                  <button
+                    className="remove-email"
+                    onClick={() =>
+                      this.setState((prevState) => {
+                        return {
+                          ...prevState,
+                          emails: prevState.emails.slice(0, -1),
+                        };
+                      })
+                    }>
+                    Remove Email
+                  </button>
                 </div>
-              );
-            })}
-            <button
-              className="add-email"
-              onClick={() => {
-                this.setState((prevState) => {
-                  return { ...prevState, emails: [...prevState.emails, ""] };
-                });
-              }}>
-              Add Email
-            </button>
-            {emails.length > 1 && (
+              )}
+            </label>
+
+            <div className="add-sub-section">
               <button
-                className="remove-email"
-                onClick={() =>
+                className="add-email"
+                onClick={() => {
                   this.setState((prevState) => {
-                    return {
-                      ...prevState,
-                      emails: prevState.emails.slice(0, -1),
-                    };
-                  })
-                }>
-                Remove Email
+                    return { ...prevState, emails: [...prevState.emails, ""] };
+                  });
+                }}>
+                Add Another Email
               </button>
-            )}
+            </div>
           </div>
         </div>
-        <button
-          type="submit"
-          onClick={(event) => {
-            event.preventDefault();
-            this.props.updateLinksEmailsData({
-              socialMediaLinks: this.state.socialMediaLinks,
-              emails: this.state.emails,
-            });
-          }}>
-          Save
-        </button>
+        <div className="form-save-button">
+          <button
+            type="submit"
+            onClick={(event) => {
+              event.preventDefault();
+              this.props.updateLinksEmailsData({
+                socialMediaLinks: this.state.socialMediaLinks,
+                emails: this.state.emails,
+              });
+            }}>
+            Save
+          </button>
+        </div>
       </div>
     );
   }

@@ -14,7 +14,7 @@ class ProjectForm extends Component {
       <div>
         <div className="form-heading">Project</div>
         {data.map((exp, index) => (
-          <div key={index}>
+          <div className="input-field-section" key={index}>
             <label>
               Project Heading:
               <input
@@ -97,41 +97,50 @@ class ProjectForm extends Component {
             </label>
           </div>
         ))}
-        <button
-          type="button"
-          onClick={() => {
-            this.setState((prevState) => ({
-              data: [
-                ...prevState.data,
-                {
-                  project_heading: "",
-                  imgSrc: "",
-                  project_desc: "",
-                  gitUrl: "",
-                  extUrl: "",
-                },
-              ],
-            }));
-          }}>
-          Add Project
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            this.setState((prevState) => ({
-              data: prevState.data.slice(0, -1),
-            }));
-          }}>
-          Remove Project
-        </button>
-        <button
-          type="submit"
-          onClick={(event) => {
-            event.preventDefault();
-            this.props.updateUserData(this.state.data, "projectWork");
-          }}>
-          Save
-        </button>
+        {this.state.data.length !== 1 && (
+          <div className="add-sub-section">
+            <button
+              type="button"
+              onClick={() => {
+                this.setState((prevState) => ({
+                  data: prevState.data.slice(0, -1),
+                }));
+              }}>
+              Remove Project
+            </button>
+          </div>
+        )}
+        <div className="form-save-button">
+          <button
+            type="button"
+            onClick={() => {
+              this.setState((prevState) => ({
+                data: [
+                  ...prevState.data,
+                  {
+                    project_heading: "",
+                    imgSrc: "./assets/",
+                    project_desc: "",
+                    gitUrl: "https://",
+                    extUrl: "https://",
+                  },
+                ],
+              }));
+            }}>
+            Add Another Project
+          </button>
+        </div>
+
+        <div className="form-save-button">
+          <button
+            type="submit"
+            onClick={(event) => {
+              event.preventDefault();
+              this.props.updateUserData(this.state.data, "projectWork");
+            }}>
+            Save
+          </button>
+        </div>
       </div>
     );
   }

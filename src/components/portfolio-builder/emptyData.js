@@ -11,10 +11,10 @@ const sampleAppObject = {
     projectWork: [
       {
         project_heading: "",
-        imgSrc: "",
+        imgSrc: "./assets/",
         project_desc: "",
-        gitUrl: "",
-        extUrl: "",
+        gitUrl: "https://",
+        extUrl: "https://",
       },
     ],
     contactInfo: {
@@ -24,33 +24,33 @@ const sampleAppObject = {
     introInfo: {
       name: "",
       status: "",
-      displayPic: "",
+      displayPic: "./assets/",
       summary: "",
     },
     aboutInfo: {
       firstPara: "",
       secondPara: "",
-      displayPic: "",
+      displayPic: "./assets/",
       skillsList: [""],
     },
   },
   headerData: {
-    resumeSrc: "",
-    logoSrc: "",
+    resumeSrc: "./assets/",
+    logoSrc: "./assets/",
   },
   footerData: {
-    gitUrl: "",
+    gitUrl: "https://",
     creditContent: "",
     creditUrl: "",
     selfCreditContent: "",
     gitRepo: "",
   },
   socialMediaLinks: {
-    githubUrl: "",
-    leetcodeUrl: "",
-    instaUrl: "",
-    twitterUrl: "",
-    linkedinUrl: "",
+    githubUrl: "https://",
+    leetcodeUrl: "https://",
+    instaUrl: "https://",
+    twitterUrl: "https://",
+    linkedinUrl: "https://",
   },
   emails: [""],
 };

@@ -26,42 +26,46 @@ class IntroForm extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-heading">Intro</div>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label>
-          Status:
-          <input
-            type="text"
-            name="status"
-            value={status}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label>
-          Display Pic:
-          <input
-            type="text"
-            name="displayPic"
-            value={displayPic}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label>
-          Summary:
-          <textarea
-            name="summary"
-            value={summary}
-            onChange={this.handleChange}
-          />
-        </label>
-        <button type="submit">Save</button>
+        <div className="input-field-section">
+          <label>
+            Name:
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label>
+            Status:
+            <input
+              type="text"
+              name="status"
+              value={status}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label>
+            Display Picture:
+            <input
+              type="text"
+              name="displayPic"
+              value={displayPic}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label>
+            Summary:
+            <textarea
+              name="summary"
+              value={summary}
+              onChange={this.handleChange}
+            />
+          </label>
+        </div>
+        <div className="form-save-button">
+          <button type="submit">Save</button>
+        </div>
       </form>
     );
   }

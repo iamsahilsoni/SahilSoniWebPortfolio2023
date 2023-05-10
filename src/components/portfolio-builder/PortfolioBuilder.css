@@ -8,7 +8,6 @@
   padding: 20px;
   border-radius: 5px;
   box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
-  max-height: 500px;
 }
 
 .form-heading {
@@ -71,8 +70,45 @@
   transform: translateY(1px);
 }
 
+.form-heading {
+  margin-bottom: 20px;
+}
+
+.input-field-section {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 100px;
+  border: 1px solid #8b7a7a;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.input-field-section label {
+  display: grid;
+  margin: 10px 10px 10px;
+}
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-save-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.add-sub-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
 @media (max-width: 500px) {
   .portfolioBuilder {
     padding: 20px 20px;
+  }
+  .input-field-section label {
+    display: grid;
+    margin: 10px 20px 0;
   }
 }
