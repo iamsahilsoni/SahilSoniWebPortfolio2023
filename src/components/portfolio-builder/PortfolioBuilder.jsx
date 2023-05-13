@@ -35,6 +35,7 @@ class PortfolioBuilder extends Component {
       activeSection: 0,
       openPreview: false,
       appData: AppData,
+      isCurrFormSaved: false,
     };
   }
 
@@ -60,6 +61,7 @@ class PortfolioBuilder extends Component {
             [propName]: newData,
           },
         },
+        isCurrFormSaved: true,
       };
       return updatedObj;
     });
@@ -74,6 +76,7 @@ class PortfolioBuilder extends Component {
           headerData: newData.headerData,
           footerData: newData.footerData,
         },
+        isCurrFormSaved: true,
       };
       return updatedObj;
     });
@@ -88,6 +91,7 @@ class PortfolioBuilder extends Component {
           socialMediaLinks: newData.socialMediaLinks,
           emails: newData.emails,
         },
+        isCurrFormSaved: true,
       };
       return updatedObj;
     });
@@ -145,10 +149,17 @@ class PortfolioBuilder extends Component {
             disabled={this.state.activeSection === 0}>
             Previous
           </button>
-          <button onClick={() => this.togglePreview()}>Preview</button>
+          <button
+            onClick={() => this.togglePreview()}
+            disabled={
+              this.state.activeSection === 0 || !this.state.isCurrFormSaved
+            }>
+            Preview
+          </button>
           {this.state.activeSection + 1 === this.forms.length && (
             <button
               className="generate-json"
+              disabled={!this.state.isCurrFormSaved}
               onClick={() => {
                 const json = JSON.stringify(this.state.appData);
                 const blob = new Blob([json], { type: "application/json" });
@@ -165,10 +176,35 @@ class PortfolioBuilder extends Component {
             </button>
           )}
           <button
-            onClick={() => this.handleButtonClick(this.state.activeSection + 1)}
-            disabled={this.state.activeSection + 1 >= this.forms.length}>
+            onClick={() => {
+              this.state.isCurrFormSaved = false;
+              this.handleButtonClick(this.state.activeSection + 1);
+            }}
+            disabled={
+              this.state.activeSection !== 0 &&
+              (this.state.activeSection + 1 >= this.forms.length ||
+                !this.state.isCurrFormSaved)
+            }>
             Next
           </button>
+        </div>
+        <div
+          style={
+            this.state.activeSection === 0 || this.state.isCurrFormSaved
+              ? { display: "none" }
+              : {
+                  display: "flex",
+                  justifyContent: "center",
+                  margin: "20px 0",
+                  backgroundColor: "antiquewhite",
+                  color: "#ff0e0e",
+                  padding: "5px 2px",
+                }
+          }>
+          <p style={{ margin: 0 }}>
+            Please save the current form before previewing or proceeding to the
+            next form.
+          </p>
         </div>
         <div className="form-section">{this.renderSectionContent()}</div>
 

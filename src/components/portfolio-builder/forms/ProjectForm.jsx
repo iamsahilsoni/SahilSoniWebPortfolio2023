@@ -106,7 +106,7 @@ class ProjectForm extends Component {
                   data: prevState.data.slice(0, -1),
                 }));
               }}>
-              Remove Project
+              Remove Last Project
             </button>
           </div>
         )}

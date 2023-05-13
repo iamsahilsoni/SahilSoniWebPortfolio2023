@@ -22,7 +22,8 @@
   align-items: center;
 }
 
-.switch-btn button:not(.generate-json) {
+.switch-btn button:not(.generate-json),
+.form-save-button button {
   font-family: inherit;
 
   padding: 8px 16px;

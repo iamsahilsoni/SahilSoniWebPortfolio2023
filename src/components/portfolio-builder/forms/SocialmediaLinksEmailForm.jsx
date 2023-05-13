@@ -134,6 +134,7 @@ class SocialMediaLinksEmailForm extends Component {
                 <div>
                   <button
                     className="remove-email"
+                    style={{ margin: "3px" }}
                     onClick={() =>
                       this.setState((prevState) => {
                         return {
@@ -142,7 +143,7 @@ class SocialMediaLinksEmailForm extends Component {
                         };
                       })
                     }>
-                    Remove Email
+                    Remove Last Email
                   </button>
                 </div>
               )}

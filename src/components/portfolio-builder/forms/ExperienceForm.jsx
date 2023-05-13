@@ -68,7 +68,7 @@ class ExperienceForm extends Component {
               Description:
               {exp.description.map((description, descIndex) => (
                 <div key={descIndex}>
-                  <input
+                  <textarea
                     type="text"
                     name={`description[${descIndex}]`}
                     value={description}
@@ -92,6 +92,7 @@ class ExperienceForm extends Component {
                   {descIndex !== 0 && (
                     <button
                       type="button"
+                      style={{ margin: "10px" }}
                       onClick={() => {
                         this.setState((prevState) => ({
                           data: prevState.data.map((exp, i) =>
@@ -144,7 +145,7 @@ class ExperienceForm extends Component {
                   data: prevState.data.slice(0, -1),
                 }));
               }}>
-              Remove Experience
+              Remove Last Experience
             </button>
           </div>
         )}

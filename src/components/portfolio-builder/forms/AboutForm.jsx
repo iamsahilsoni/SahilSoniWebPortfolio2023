@@ -107,6 +107,7 @@ class AboutForm extends Component {
                 {index !== 0 && (
                   <button
                     type="button"
+                    style={{ margin: "10px" }}
                     onClick={() => this.handleRemoveSkill(index)}>
                     Remove Skill
                   </button>
