@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import Header from "./header/Header";
 import LeftPanel from "./left-panel/LeftPanel";
 import RightPanel from "./right-panel/RightPanel";
 import AllSections from "./all-sections/AllSections";
 import Footer from "./footer/Footer";
 import { Routes, Route } from "react-router-dom";
-import { PortfolioBuilder } from "./portfolio-builder";
 import "./Main.css";
+
+const LazyPortfolioBuilder = lazy(() =>
+  import("./portfolio-builder/PortfolioBuilderWrapper")
+);
 
 export default function Main({
   headerData,
@@ -36,7 +39,14 @@ export default function Main({
       <div className="wrapper">
         <Routes>
           <Route path="/" element={<AllSections {...userData} />} />
-          <Route path="/build-your-portfolio" element={<PortfolioBuilder />} />
+          <Route
+            path="/build-your-portfolio"
+            element={
+              <Suspense fallback={<h1>Loading...</h1>}>
+                <LazyPortfolioBuilder />
+              </Suspense>
+            }
+          />
           <Route
             path="*"
             element={
